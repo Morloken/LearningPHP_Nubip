@@ -12,7 +12,7 @@
 <?php
 
 ?>
-<h1>Home page</h1>
+<h1>About us</h1>
 <footer>
     All rights reserved &copy;
 </footer>
