@@ -25,6 +25,7 @@ require "blocks/header.php";
 
 
 <?php
+/*
 $lis = [1,2,3,4,5,6,7,8,9,10];
 unset($lis[2]);//deleting element from array
 $lis = array_values($lis);//indexses become normal
@@ -59,9 +60,14 @@ echo '<br>';
 echo is_numeric($x);
 echo '<br>';
 echo is_integer($x);
-/*
- * in PHP if FALSE - nothing will show, but if TRUE - 1.
- * */
+
+  //in PHP if FALSE - nothing will show, but if TRUE - 1.
+
+
+
+
+
+
 echo '<br>';
 //working on text
 $word = "example";
@@ -87,7 +93,45 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 //    .'<br>';
 //echo date('m-l Час: H:i:s    ', strtotime('next Day'));
 
+*/
 
+
+
+
+
+//WORK WITH FILES
+$file = fopen('text.txt', 'w');// W - write, A - append, R - read
+fwrite($file, "hello world in new txt file");
+
+fwrite($file, "\nhello second world");
+fwrite($file, "\tHI");
+
+fclose($file);
+
+
+
+
+
+$file2 = fopen('text.txt', 'r');
+$get_info_from_file = fread($file2, filesize('text.txt'));
+fclose($file2);
+echo  '<pre>'.$get_info_from_file.'</pre><br>';
+//pre - for outputting info with all space amd Enter parameters included
+//ADDITION FUNCTIONS FOR FILES
+file_put_contents('a.txt', "Example\nHello");
+
+echo file_get_contents('a.txt').'<br>';
+
+echo file_exists('a.txt');
+
+rename('a.txt', 'b.txt');
+
+unlink('b.txt');//deleting files
+echo '<br>';
+echo __FILE__;//path of the current file
+echo fileperms(__FILE__).'<br>';//rights of this file
+
+////chmod('text.txt');//securing the file from all doings
 
 
 require "blocks/footer.php";
