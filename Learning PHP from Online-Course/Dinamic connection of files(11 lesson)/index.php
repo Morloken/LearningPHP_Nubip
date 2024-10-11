@@ -1,7 +1,9 @@
 
 <?php
-$title = "Home PHP";
 require "blocks/header.php";
+
+$title = "Home PHP";
+
 #   include better
 # include_once Only one time
 ?>
@@ -143,7 +145,7 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 //echo $_SERVER['HTTP_HOST'] . ' - ' . $_SERVER['REQUEST_URI'];
 //
 //echo $_SERVER['HTTP_USER_AGENT'].'<br>';
-//----------------------------------------------------
+//----------------------------------------------------17
 //$message = 'Text message';
 //$to = 'admin@gmail.com';
 //$from  = 'exampleemail@gmail.com';
@@ -153,7 +155,26 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 //$headers = "From: $from\r\nReply-to: $from\r\nContent-type: text/plain; charset = utf-8\r\n";
 //
 //mail($to, $subject, $message, $headers);
+//----------------------------------------------------18
+//cookie
+$user_name = "Alex";
+//setcookie("user_name", $user_name, time() + 180);
+//setcookie("user_name", $user_name, time() - 180);
+print_r($_COOKIE);
 
+echo '<br>'.$_COOKIE['user_name'].'<br>';
+//sessions
+$_SESSION['user_name']= $user_name;
+print_r($_SESSION);
+
+echo '<br>'.$_COOKIE['user_name'].'<br>';
+
+unset($_SESSION['user_name']);
+
+session_destroy();
+
+
+if($_SESSION['user_name'] =="Alex"){/*something*/}
 
 require "blocks/footer.php";
 ?>

@@ -1,18 +1,20 @@
 
 <?php
-//    if(isset($_GET['lesson']) && $_GET['lesson'] != '')
-if(isset($_GET['lesson']))
 
-//        if($_GET['?_ijt'] != '')
-        {
-//            $link = explode("_ijt", $_SERVER['REQUEST_URI']);
-            $link = explode("lesson", $_SERVER['REQUEST_URI']);
-            $redirect = 'http://'.$_SERVER['HTTP_HOST'].$link[0];
-
-
-            header('HTTP/1.1 301 Moved Permanently');
-            header('Location: '.$redirect);exit;
-        }
+session_start();
+////    if(isset($_GET['lesson']) && $_GET['lesson'] != '')
+//if(isset($_GET['lesson']))
+//
+////        if($_GET['?_ijt'] != '')
+//        {
+////            $link = explode("_ijt", $_SERVER['REQUEST_URI']);
+//            $link = explode("lesson", $_SERVER['REQUEST_URI']);
+//            $redirect = 'http://'.$_SERVER['HTTP_HOST'].$link[0];
+//
+//
+//            header('HTTP/1.1 301 Moved Permanently');
+//            header('Location: '.$redirect);exit;
+//        }
 ?>
 
 <!DOCTYPE html>
