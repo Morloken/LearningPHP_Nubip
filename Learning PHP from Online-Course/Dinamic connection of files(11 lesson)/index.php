@@ -140,10 +140,19 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 
 //echo $_SERVER['HTTPS'].'<br>';
 
-echo $_SERVER['HTTP_HOST'] . ' - ' . $_SERVER['REQUEST_URI'];
-
-echo $_SERVER['HTTP_USER_AGENT'].'<br>';
-
+//echo $_SERVER['HTTP_HOST'] . ' - ' . $_SERVER['REQUEST_URI'];
+//
+//echo $_SERVER['HTTP_USER_AGENT'].'<br>';
+//----------------------------------------------------
+//$message = 'Text message';
+//$to = 'admin@gmail.com';
+//$from  = 'exampleemail@gmail.com';
+//$subject = 'SUBJECT TEXT';
+//
+//$subject = '=?utf-8?B?'.base64_encode($subject).'?=';
+//$headers = "From: $from\r\nReply-to: $from\r\nContent-type: text/plain; charset = utf-8\r\n";
+//
+//mail($to, $subject, $message, $headers);
 
 
 require "blocks/footer.php";
