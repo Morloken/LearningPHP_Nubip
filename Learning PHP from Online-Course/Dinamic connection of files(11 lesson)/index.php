@@ -157,24 +157,25 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 //mail($to, $subject, $message, $headers);
 //----------------------------------------------------18
 //cookie
-$user_name = "Alex";
-//setcookie("user_name", $user_name, time() + 180);
-//setcookie("user_name", $user_name, time() - 180);
-print_r($_COOKIE);
-
-echo '<br>'.$_COOKIE['user_name'].'<br>';
-//sessions
-$_SESSION['user_name']= $user_name;
-print_r($_SESSION);
-
-echo '<br>'.$_COOKIE['user_name'].'<br>';
-
-unset($_SESSION['user_name']);
-
-session_destroy();
-
-
-if($_SESSION['user_name'] =="Alex"){/*something*/}
+//$user_name = "Alex";
+////setcookie("user_name", $user_name, time() + 180);
+////setcookie("user_name", $user_name, time() - 180);
+//print_r($_COOKIE);
+//
+//echo '<br>'.$_COOKIE['user_name'].'<br>';
+////sessions
+//$_SESSION['user_name']= $user_name;
+//print_r($_SESSION);
+//
+//echo '<br>'.$_COOKIE['user_name'].'<br>';
+//
+//unset($_SESSION['user_name']);
+//
+//session_destroy();
+//
+//
+//if($_SESSION['user_name'] =="Alex"){/*something*/}
+//-----------------------------------------------------19
 
 require "blocks/footer.php";
 ?>

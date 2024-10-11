@@ -1,7 +1,7 @@
 
 <?php
 
-session_start();
+//session_start();
 ////    if(isset($_GET['lesson']) && $_GET['lesson'] != '')
 //if(isset($_GET['lesson']))
 //
