@@ -100,38 +100,50 @@ echo implode(" | ", $arr_Words);//збирання масиву назад
 
 
 //WORK WITH FILES
-$file = fopen('text.txt', 'w');// W - write, A - append, R - read
-fwrite($file, "hello world in new txt file");
-
-fwrite($file, "\nhello second world");
-fwrite($file, "\tHI");
-
-fclose($file);
-
-
+//$file = fopen('text.txt', 'w');// W - write, A - append, R - read
+//fwrite($file, "hello world in new txt file");
+//
+//fwrite($file, "\nhello second world");
+//fwrite($file, "\tHI");
+//
+//fclose($file);
 
 
 
-$file2 = fopen('text.txt', 'r');
-$get_info_from_file = fread($file2, filesize('text.txt'));
-fclose($file2);
-echo  '<pre>'.$get_info_from_file.'</pre><br>';
+
+
+//$file2 = fopen('text.txt', 'r');
+//$get_info_from_file = fread($file2, filesize('text.txt'));
+//fclose($file2);
+//echo  '<pre>'.$get_info_from_file.'</pre><br>';
 //pre - for outputting info with all space amd Enter parameters included
 //ADDITION FUNCTIONS FOR FILES
-file_put_contents('a.txt', "Example\nHello");
+//file_put_contents('a.txt', "Example\nHello");
 
-echo file_get_contents('a.txt').'<br>';
+//echo file_get_contents('a.txt').'<br>';
 
-echo file_exists('a.txt');
+//echo file_exists('a.txt');
 
-rename('a.txt', 'b.txt');
+//rename('a.txt', 'b.txt');
 
-unlink('b.txt');//deleting files
-echo '<br>';
-echo __FILE__;//path of the current file
-echo fileperms(__FILE__).'<br>';//rights of this file
+//unlink('b.txt');//deleting files
+//echo '<br>';
+//echo __FILE__;//path of the current file
+//echo fileperms(__FILE__).'<br>';//rights of this file
 
 ////chmod('text.txt');//securing the file from all doings
+
+//------------------------------------------------------
+//phpinfo();
+//--------------
+//echo '<pre>'.print_r($_SERVER, true).'</pre>';
+
+//echo $_SERVER['HTTPS'].'<br>';
+
+echo $_SERVER['HTTP_HOST'] . ' - ' . $_SERVER['REQUEST_URI'];
+
+echo $_SERVER['HTTP_USER_AGENT'].'<br>';
+
 
 
 require "blocks/footer.php";
